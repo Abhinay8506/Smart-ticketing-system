@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Ticket Management System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🎫 Smart Ticket Management System</h1>
+
+<div class="stats">
+    <p>Total Tickets: {{ stats.total }}</p>
+    <p>Open Tickets: {{ stats.open }}</p>
+    <p>Closed Tickets: {{ stats.closed }}</p>
+</div>
+
+<hr>
+
+<h2>Raise a Ticket</h2>
+
+<textarea id="description" name="description" required placeholder="Describe your issue..."></textarea>
+
+<br>
+<button type="button" onclick="raiseTicket()">Submit</button>
+
+<p id="result"></p>
+
+<h3>🛠 Admin Panel</h3>
+<button onclick="processNextTicket()">Process Next Ticket</button>
+
+<p id="admin-result"></p>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
